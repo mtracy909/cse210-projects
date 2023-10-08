@@ -24,7 +24,7 @@ class Program
                     entry._Prompt = entry.prompts[rnd.Next(entry.prompts.Count - 1)];
                     Console.WriteLine(entry._Prompt);
                     entry._Response = Console.ReadLine();
-                    journal.entries.Add($"Date: {entry._EntryDate} - Prompt: {entry._Prompt}\n{entry._Response}");
+                    journal.entries.Add($"Date: {entry._EntryDate} - Prompt: {entry._Prompt} - Response: {entry._Response}");
                 }
                 else if (responseNum == 2)
                 {
