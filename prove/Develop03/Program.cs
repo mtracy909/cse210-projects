@@ -26,11 +26,17 @@ class Program
                     Console.WriteLine("Please enter a valid response.");
                 }
                 _response = Console.ReadLine().ToLower();
+                if (_response == "quit")
+                {
+                    break;
+                }
             }
-            Console.Clear();
-            Console.WriteLine($"{reference.getReference()} {scripture.GetScripture()}");
-            Console.WriteLine("\nPress enter to continue or type 'quit' to finish:");
-            _response = "quit";
+            if (_response != "quit")
+            {
+                Console.Clear();
+                Console.WriteLine($"{reference.getReference()} {scripture.GetScripture()}");
+                Console.WriteLine("\nPress enter to continue or type 'quit' to finish:");
+            }
         }
     }
 }
